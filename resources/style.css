@@ -394,7 +394,6 @@ p {
   background-size: cover;
 }
 .bg-overlay::after {
-  background-color: rgba(17, 17, 17, 0.5);
   position: absolute;
   z-index: -1;
   top: 0;

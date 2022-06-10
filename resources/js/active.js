@@ -70,6 +70,7 @@
       center: true,
     });
 
+    // 슬라이드 동그라미
     Array.from(document.getElementsByClassName("sub-carousel")).map((item) => {
       Array.from(
         item.getElementsByTagName("ul")?.item(0).getElementsByTagName("li")
@@ -81,6 +82,35 @@
       });
     });
   }
+
+  //수량 개수
+
+  $(function () {
+    $(".qty-minus").click(function (e) {
+      e.preventDefault();
+      var stat = $(".numberUpDown").text();
+      var num = parseInt(stat, 10);
+      num--;
+      if (num <= 0) {
+        num = 1;
+      }
+      $(".numberUpDown").text(num);
+    });
+    $(".qty-plus").click(function (e) {
+      e.preventDefault();
+      var stat = $(".numberUpDown").text();
+      var num = parseInt(stat, 10);
+      num++;
+
+      if (num > 5) {
+        alert(
+          "구매는 최대 5개만 가능합니다. 대량주문은 고객센터에 문의 해주세요."
+        );
+        num = 5;
+      }
+      $(".numberUpDown").text(num);
+    });
+  });
 
   // :: 5.0 Masonary Gallery Active Code
   if ($.fn.imagesLoaded) {

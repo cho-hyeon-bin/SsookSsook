@@ -96,6 +96,7 @@
       }
       $(".numberUpDown").text(num);
     });
+
     $(".qty-plus").click(function (e) {
       e.preventDefault();
       var stat = $(".numberUpDown").text();

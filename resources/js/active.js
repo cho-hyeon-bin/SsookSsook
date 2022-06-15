@@ -71,6 +71,7 @@
     });
 
     // 슬라이드 동그라미
+
     Array.from(document.getElementsByClassName("sub-carousel")).map((item) => {
       Array.from(
         item.getElementsByTagName("ul")?.item(0).getElementsByTagName("li")
@@ -103,7 +104,7 @@
       var num = parseInt(stat, 10);
       num++;
 
-      if (num > 5) {
+      if (num > 6) {
         alert(
           "구매는 최대 5개만 가능합니다. 대량주문은 고객센터에 문의 해주세요."
         );
